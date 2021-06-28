@@ -1,0 +1,33 @@
+// page initialization
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: white;
+    box-shadow: 4px 4px 10px rgba(122, 122, 122, 0.3);
+    .logo {
+        flex: 3;
+        h2 {
+            margin-left: 20px;
+        }
+    }
+    ul {
+        display: flex;
+        justify-content: space-around;
+        list-style: none;
+        flex: 7;
+        li a {
+            text-decoration: none;
+            color: black;
+            font-weight: 600;
+        }
+    }
+}
