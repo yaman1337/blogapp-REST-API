@@ -8,7 +8,7 @@ module.exports = (req, res, next) => {
     const token = authorization.replace('Bearer ', '')
     jwt.verify(token, secretKey, (err, payload) => {
         if (err) return res.status(403).json({ error: "You are not logged in." });
-        const { id } = payload;
+        const id = payload.id ? payload.id : 'null';
         User.findById(id)
             .then(data => {
                 req.user = data;
